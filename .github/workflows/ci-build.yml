@@ -29,7 +29,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
+        env:
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+          
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip wheel
